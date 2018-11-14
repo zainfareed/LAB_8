@@ -3,7 +3,8 @@ using namespace std;
 class Marks
 {
 private:
-int i,j,list[4][4],numbers;
+int i,j,numbers;
+int list[4][4];
 public:
 Marks()
 {
@@ -44,7 +45,7 @@ return average;
 }
 
 
-int show_grades()
+void show_grades()
 {
 for (i=1;i<4;i++)
 {
@@ -59,12 +60,15 @@ cout<<" | "<<list[i][j];
 };
 int main()
 {
-int ag=0;
+int avrg=0;
 Marks obj1;
 obj1.grade_set();
 obj1.show_grades();
-cout<<"enter the number of student to check its average : ";
-cin>>ag;
-cout<<obj1.avg(ag)<<endl;
-//return 0;
+cout<<"Enter the number of student to check its average : ";
+cin>>avrg;
+cout<<obj1.avg(avrg)<<endl;
+
+
+
+return 0;
 }
